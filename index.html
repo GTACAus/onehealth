@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>One Health</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+      }
+
+      .grid-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px;
+        max-width: 1000px;
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+      
+      .card {
+        width: 250px;
+      }
+
+      .card img {
+        border-radius: 10px;
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+        cursor: pointer;
+      }
+
+      .card h2 {
+        font-size: 1.5em;
+        margin: 10px 0;
+      }
+
+      .card a {
+        display: block;
+        text-decoration: none;
+        color: white;
+        background-color: #007bff;
+        padding: 10px;
+        border-radius: 25px;
+        font-size: 1em;
+        margin-top: 10px;
+      }
+
+      .card a:hover {
+        background-color: #0056b3;
+      }
+
+      @media (max-width: 768px) {
+        .grid-container {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (min-width: 769px) and (max-width: 1024px) {
+        .grid-container {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <!-- First Item -->
+
+      <div class="card">
+        <a href="supersteward.html">
+          <img
+            src="https://cdn.glitch.global/2ff587d9-8bfc-4b66-8724-2986e005104a/SuperSteward.png?v=1742946370680"
+            alt="Super Steward Kit"
+          />
+          <h2>Super Steward Kit</h2>
+        </a>
+      </div>
+
+      <!-- Second Item -->
+
+      <div class="card">
+        <a href="spin.html">
+          <img src="WeatherStation.jpg" alt="Build and Code a Robot to Dig Holes" />
+          <h2>Build and Code a Digging Robot</h2>
+        </a>
+        <a href="spin.html">Learn More</a>
+      </div>
+
+      <!-- Third Item -->
+
+      <div class="card">
+        <a href="identify.html">
+          <img
+            src="recycler.jpg"
+            alt="Make a Robot that Identifies Types of Rubbish for Recycling"
+          />
+          <h2>Make a Robotic Rubbish Recycler</h2>
+        </a>
+        <a href="identify.html">Learn More</a>
+      </div>
+
+      <!-- Fourth Item -->
+
+      <div class="card">
+        <a href="sense.html">
+          <img
+            src="sensebot.png"
+            alt="Make a Robot that Detects and Avoids Walls and People"
+          />
+          <h2>Help a Robot to Detect and Avoid Hazards</h2>
+        </a>
+        <a href="sense.html">Learn More</a>
+      </div>
+
+      <!-- Fifth Item -->
+
+      <div class="card">
+        <a id="legoLink" href="https://spike.legoeducation.com/prime/start">
+          <img
+            id="legoImage"
+            src="https://spike.legoeducation.com/content/v3/assets/blt293eea581807678a/bltebc653299ecc2149/60d1b8edb930a53616fa4635/UTAL1_app_thumbnail.jpg"
+            alt="LEGO Spike Robotics Tutorials"
+          />
+          <h2>LEGO Spike Robotics Parts: how to use them</h2>
+        </a>
+        <a id="legoLearnMore" href="https://spike.legoeducation.com/prime/start"
+          >Learn More</a
+        >
+      </div>
+    </div>
+    <script>
+      function isiPad() {
+        if (navigator.userAgent.includes("iPad")) {
+          return true;
+        }
+        if (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1) {
+          return true;
+        }
+        return false;
+      }
+
+      if (isiPad()) {
+        document.getElementById("legoImage").src = "nav2start.gif";
+        document.getElementById("legoLink").href = "spike://";
+        document.getElementById("legoLearnMore").href = "spike://";
+
+        document.getElementById("robotImage").src = "nav2hopper.gif";
+        document.getElementById("robotLink").href = "spike://";
+        document.getElementById("robotLearnMore").href = "spike://";
+      }
+    </script>
+  </body>
+</html>
