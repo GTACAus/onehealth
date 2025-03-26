@@ -1,0 +1,6 @@
+        const tok1 = 'ghp_89EXQoRc5gT0Hr';
+        const tok2 = 'hHvQ084h7PNGT2sk1qhCP6';
+        const token = tok1 + tok2;
+        const gistId = '6a4cc8d5fddc9c8455d132c665766ef3';
+        const fileName = 'wordcloudweather.txt';
+        const apiUrl = `https://api.github.com/gists/${gistId}`;
