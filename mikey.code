@@ -4,3 +4,6 @@
         const gistId = '6a4cc8d5fddc9c8455d132c665766ef3';
         const fileName = 'wordcloudweather.txt';
         const apiUrl = `https://api.github.com/gists/${gistId}`;
+
+
+https://gist.githubusercontent.com/GTACAus/9cf36ca5a6f29a7cce9a12af1cbf0651/raw/76d37691a383d7626f9d51314d971888e9144fcf/wordcloudalert.txt
